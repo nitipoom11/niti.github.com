@@ -1,151 +1,32 @@
-/* 1. รีเซ็ตค่าเริ่มต้นและตั้งค่าฟอนต์ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-}
-
-/* โทนสีหลักของเว็บ (Dark Mode) */
-body {
-    background-color: #0f172a; /* น้ำเงินเข้มเกือบดำ */
-    color: #e2e8f0; /* สีตัวอักษรขาวเทา อ่านง่ายสบายตา */
-    line-height: 1.6;
-    padding: 0 20px;
-}
-
-/* 2. ส่วนหัวของเว็บ (Header) */
-header {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    border-bottom: 2px solid #ff4d00; /* เส้นใต้สีส้ม Neon */
-    margin-bottom: 40px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-header h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(255, 77, 0, 0.3);
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #94a3b8;
-}
-
-/* 3. การจัดตกแต่ง Section ทั่วไป */
-section {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    padding: 30px;
-    background-color: #1e293b; /* กล่องสีเทาเข้มยกสูง */
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-/* เอฟเฟกต์ยกตัวเวลาเอาเมาส์ไปชี้ */
-section:hover {
-    transform: translateY(-5px);
-}
-
-section h2 {
-    color: #ff4d00; /* หัวข้อสีส้มเท่ๆ */
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    border-left: 5px solid #ff4d00;
-    padding-left: 15px;
-}
-
-/* 4. ส่วนแสดงผลงาน (Projects) */
-#projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 คอลัมน์ซ้ายขวา */
-    gap: 20px;
-}
-
-/* ดึงหัวข้อใหญ่ของ Project ให้เต็มความกว้าง */
-#projects h2 {
-    grid-column: 1 / -1;
-}
-
-.project {
-    background-color: #0f172a;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #334155;
-    transition: all 0.3s ease;
-}
-
-.project:hover {
-    border-color: #ff4d00;
-    box-shadow: 0 0 15px rgba(255, 77, 0, 0.2);
-}
-
-.project h3 {
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.project p {
-    color: #94a3b8;
-    font-size: 0.95rem;
-}
-
-/* 5. ส่วนแสดงทักษะ (Skills) */
-#skills ul {
-    list-style: none; /* เอาจุดหน้าลิสต์ออก */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-#skills li {
-    background: linear-gradient(90deg, #ff4d00 0%, #ff7300 100%);
-    color: #ffffff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(255, 77, 0, 0.2);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* 6. ส่วนท้ายเว็บ (Footer) */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: #64748b;
-    font-size: 0.9rem;
-    border-top: 1px solid #1e293b;
-    margin-top: 60px;
-}
-
 footer a {
-    color: #ff4d00;
+    color: #00c6ff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #ff7300;
     text-decoration: underline;
 }
 
-/* รองรับการแสดงผลบนมือถือ */
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    #projects {
-        grid-template-columns: 1fr;
-    }
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    section {
+        margin: 20px;
+        padding: 20px;
     }
 }
