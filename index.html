@@ -5,7 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Nitipoom">
     <title>ความภาคภูมิใจของ NITIPOOM</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ==========================================================================
+           CSS Stylesheet (Dark Cyberpunk / Tech Modern Theme)
+           ========================================================================== */
+        
+        /* รีเซ็ตค่าเริ่มต้นของ Browser */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19; /* พื้นหลังสีดำเข้มสไตล์อวกาศ/ไซเบอร์ */
+            color: #e2e8f0; /* ตัวอักษรสีขาวนวล อ่านง่าย ไม่ล้าสายตา */
+            line-height: 1.6;
+        }
+
+        /* ส่วนหัว (Header) - ไล่เฉดสีนีออนเข้ม */
+        header {
+            background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
+            text-align: center;
+            padding: 5rem 1rem 3rem 1rem;
+            border-bottom: 2px solid #1e293b;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #00f2fe; /* สีฟ้านีออน */
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.4); /* เอฟเฟกต์เรืองแสง */
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #94a3b8; /* สีเทาอ่อน */
+        }
+
+        /* จัดการเนื้อหาหลักใน Section */
+        section {
+            max-width: 800px;
+            margin: 2.5rem auto;
+            padding: 2.5rem;
+            background-color: #111827; /* กล่องข้อความสีเทาเข้มตัดกับพื้นหลัง */
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            color: #00f2fe;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        /* เส้นใต้หัวข้อแบบล้ำๆ */
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            border-radius: 2px;
+        }
+
+        /* ส่วนแสดงผลงาน (Projects) */
+        .project {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        /* เมื่อเมาส์ชี้ที่ผลงาน จะมีไฟวิ่งและยกตัวขึ้น */
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: #00f2fe;
+            box-shadow: 0 5px 20px rgba(0, 242, 254, 0.2);
+        }
+
+        .project h3 {
+            color: #38bdf8; /* ฟ้าสว่าง */
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .project p {
+            color: #94a3b8;
+        }
+
+        /* ส่วนแสดงทักษะ (Skills) */
+        #skills ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        #skills li {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            border: 1px solid #374151;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #cbd5e1;
+            transition: all 0.2s ease;
+        }
+
+        #skills li:hover {
+            background: #00f2fe;
+            color: #0b0f19; /* สลับสีตัวอักษรตอน Hover */
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* ส่วนท้าย (Footer) */
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #030712;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            margin-top: 5rem;
+        }
+
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #00f2fe;
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+        }
+
+        footer p {
+            margin-bottom: 0.75rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -43,25 +194,6 @@
         </ul>
     </section>
 
-    <section id="computer-works">
-        <h2>ผลงานคอมพิวเตอร์</h2>
-
-        <div class="project">
-            <h3>โปรแกรมคำนวณคะแนนเฉลี่ยสะสม (GPAX Calculator)</h3>
-            <p>พัฒนาโปรแกรมเดสก์ท็อปขนาดเล็กเพื่อช่วยให้นักเรียนสามารถคำนวณและวางแผนผลการเรียนได้อย่างถูกต้องและรวดเร็ว</p>
-        </div>
-
-        <div class="project">
-            <h3>โครงงานระบบเปิด-ปิดไฟอัตโนมัติด้วย IoT</h3>
-            <p>ประยุกต์ใช้บอร์ดไมโครคอนโทรลเลอร์ร่วมกับเซนเซอร์ตรวจจับความเคลื่อนไหว เพื่อช่วยประหยัดพลังงานภายในห้องเรียน</p>
-        </div>
-
-        <div class="project">
-            <h3>สื่อมัลติมีเดียและกราฟิกดีไซน์</h3>
-            <p>ออกแบบภาพอินโฟกราฟิกและตัดต่อวิดีโอสั้นเพื่อใช้ในการนำเสนอรายงานและกิจกรรมต่าง ๆ ของโรงเรียน</p>
-        </div>
-    </section>
-
     <footer>
         <p>ติดต่อผมได้ที่:
             <a href="mailto:nitipoom@example.com">nitipoom@example.com</a>
@@ -69,7 +201,13 @@
         <p>&copy; <span id="year"></span> NITIPOOM. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const yearSpan = document.getElementById("year");
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear;
+        });
+    </script>
 
 </body>
 </html>
