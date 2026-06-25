@@ -77,26 +77,24 @@
             display: inline-block;
         }
 
-        /* 🛠️ เพิ่ม CSS ตกแต่งรูปภาพให้สวยงาม */
         .profile-container {
             display: flex;
             flex-direction: column;
-            align-items: center; /* จัดให้รูปอยู่ตรงกลาง */
+            align-items: center;
             gap: 1.5rem;
             text-align: center;
         }
 
         .profile-img {
-            width: 150px;         /* ความกว้างของรูป */
-            height: 150px;        /* ความสูงของรูป (เท่ากันเพื่อให้เป็นสี่เหลี่ยมจัตุรัส) */
-            object-fit: cover;    /* ป้องกันไม่ให้รูปเบี้ยวหรือยืด */
-            border-radius: 50%;   /* เปลี่ยนรูปเป็นทรงกลม (ถ้าอยากได้สี่เหลี่ยมมนให้เปลี่ยนเป็น 16px) */
-            border: 3px solid var(--pastel-pink); /* เพิ่มเส้นขอบสีชมพูพาสเทลเท่ๆ */
-            box-shadow: 0 0 15px rgba(248, 187, 208, 0.5); /* เพิ่มเงาเรืองแสง */
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--pastel-pink);
+            box-shadow: 0 0 15px rgba(248, 187, 208, 0.5);
         }
 
         @media (min-width: 600px) {
-            /* บนจอคอมพิวเตอร์ จะจัดให้รูปอยู่ซ้าย ข้อความอยู่ขวา */
             .profile-container {
                 flex-direction: row;
                 text-align: left;
@@ -173,6 +171,17 @@
                 padding: 1.5rem;
             }
         }
+        
+        /* สไตล์สำหรับรูปผลงานคอมพิวเตอร์ */
+        .work-img {
+            display: block;
+            margin: 1rem auto;
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid var(--pastel-violet);
+        }
     </style>
 </head>
 <body>
@@ -214,13 +223,28 @@
         </ul>
     </section>
 
-    <section id="skills">
-         <h2>ผลงานวิชาคอมพิวเตอร์</h2>
-        <li>งานที่1อินโฟกราฟฟิก</li>
-        <img src="png.999.jpg" width=30%">
-        <li>งานที่2</li>
-        <li>งานที่3</li>
-        <li>งานที่4</li>
+    <section id="computer-works">
+        <h2>ผลงานวิชาคอมพิวเตอร์</h2>
+        
+        <div class="project">
+            <h3>งานที่ 1 อินโฟกราฟฟิก</h3>
+            <img src="infographic.jpg" alt="ผลงานอินโฟกราฟฟิก" class="work-img">
+        </div>
+        
+        <div class="project">
+            <h3>งานที่ 2</h3>
+            <p>รายละเอียดผลงานของคุณ</p>
+        </div>
+
+        <div class="project">
+            <h3>งานที่ 3</h3>
+            <p>รายละเอียดผลงานของคุณ</p>
+        </div>
+
+        <div class="project">
+            <h3>งานที่ 4</h3>
+            <p>รายละเอียดผลงานของคุณ</p>
+        </div>
     </section>
     
     <footer>
