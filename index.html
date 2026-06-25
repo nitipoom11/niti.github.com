@@ -82,4 +82,30 @@
             display: inline-block;
         }
 
-        /* ส่วนแสดงผล
+        /* ส่วนแสดงผลงาน (Projects) */
+        .project {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--pastel-pink); /* เส้นขอบชมพูพาสเทลสุดเท่ */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(179, 157, 219, 0.2);
+        }
+
+        .project h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        /* กำหนดเส้นขอบด้านซ้ายของเซกชันผลงานคอมพิวเตอร์ให้เป็นสีม่วงพาสเทลเพื่อความแตกต่าง */
+        #computer-works .project {
+            border-left: 4px solid var(--pastel-violet);
+        }
+
+        /*
