@@ -3,258 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Nitipoom">
-    <title>ความภาคภูมิใจของ NITIPOOM</title>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;500&family=Sarabun:wght@300;400;600&display=swap');
 
-        :root {
-            --bg-dark-purple: #1e1b29;
-            --pastel-purple: #d1c4e9;
-            --pastel-violet: #b39ddb;
-            --pastel-pink: #f8bbd0;
-            --text-light: #f5f5f7;
-            --card-bg: rgba(255, 255, 255, 0.05);
-        }
+    <title>My Portfolio</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        body {
-            font-family: 'Sarabun', sans-serif;
-            background-color: var(--bg-dark-purple);
-            color: var(--text-light);
-            line-height: 1.6;
-            background-image: radial-gradient(circle at 80% 20%, rgba(179, 157, 219, 0.15) 0%, transparent 50%),
-                              radial-gradient(circle at 20% 80%, rgba(248, 187, 208, 0.1) 0%, transparent 50%);
-            background-attachment: fixed;
-            padding: 0 1rem;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Mitr', sans-serif;
-            color: var(--pastel-purple);
-            font-weight: 500;
-        }
-
-        header {
-            text-align: center;
-            padding: 5rem 1rem 3rem 1rem;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(179, 157, 219, 0.6), 0 0 20px rgba(179, 157, 219, 0.4);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: var(--pastel-violet);
-        }
-
-        section {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: var(--card-bg);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        }
-
-        section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid rgba(179, 157, 219, 0.3);
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        .profile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid var(--pastel-pink);
-            box-shadow: 0 0 15px rgba(248, 187, 208, 0.5);
-        }
-
-        @media (min-width: 600px) {
-            .profile-container {
-                flex-direction: row;
-                text-align: left;
-            }
-        }
-
-        .project {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 1.5rem;
-            margin-top: 1rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--pastel-pink);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(179, 157, 219, 0.2);
-        }
-
-        .project h3 {
-            font-size: 1.3rem;
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        #skills ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        #skills li {
-            background: rgba(179, 157, 219, 0.15);
-            padding: 0.8rem 1.2rem;
-            border-radius: 30px;
-            text-align: center;
-            border: 1px solid rgba(179, 157, 219, 0.3);
-            font-weight: bold;
-            color: var(--pastel-purple);
-            transition: background 0.3s ease;
-        }
-
-        #skills li:hover {
-            background: rgba(179, 157, 219, 0.3);
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: var(--pastel-pink);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: var(--pastel-purple);
-            text-shadow: 0 0 8px rgba(179, 157, 219, 0.6);
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            section {
-                padding: 1.5rem;
-            }
-        }
-        
-        /* สไตล์สำหรับรูปผลงานคอมพิวเตอร์ */
-        .work-img {
-            display: block;
-            margin: 1rem auto;
-            width: 80%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 12px;
-            border: 2px solid var(--pastel-violet);
-        }
-    </style>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <h1>สวัสดี! ผมคือ NITIPOOM</h1>
-        <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
-    </header>
+<!-- ================= NAVBAR ================= -->
 
-    <section id="about">
-        <h2>เกี่ยวกับผม</h2>
-        <div class="profile-container">
-            <img src="your-profile.jpg" alt="รูปภาพของ Nitipoom" class="profile-img">
-            <div>
-                <p>ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง</p>
-            </div>
-        </div>
-    </section>
+<nav class="navbar">
 
-    <section id="projects">
-        <h2>ผลงานของผม</h2>
-        <div class="project">
-            <h3>เว็บไซต์ Portfolio</h3>
-            <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถของผม</p>
-        </div>
-        <div class="project">
-            <h3>แอปพลิเคชันจัดการงาน</h3>
-            <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
-        </div>
-    </section>
+    <div class="logo">
+        PORT<span>FOLIO</span>
+    </div>
 
-    <section id="skills">
-        <h2>ทักษะของผม</h2>
-        <ul>
-            <li>เป็นคนหล่อแต่กำเนิด</li>
-            <li>เรียนดี</li>
-            <li>กีฬาเด่น</li>
-            <li>ด้านดนตรีคือยอดเอก</li>
-        </ul>
-    </section>
+    <div class="nav-links">
+        <a href="#home">หน้าแรก</a>
+        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#history">ประวัติ</a>
+        <a href="#works">ผลงาน</a>
+        <a href="#skills">ทักษะ</a>
+        <a href="#contact">ติดต่อ</a>
+    </div>
 
-    <section id="computer-works">
-        <h2>ผลงานวิชาคอมพิวเตอร์</h2>
-        
-        <div class="project">
-            <h3>งานที่ 1 อินโฟกราฟฟิก</h3>
-            <img src="infographic.jpg" alt="ผลงานอินโฟกราฟฟิก" class="work-img">
-        </div>
-        
-        <div class="project">
-            <h3>งานที่ 2</h3>
-            <p>รายละเอียดผลงานของคุณ</p>
-        </div>
+</nav>
 
-        <div class="project">
-            <h3>งานที่ 3</h3>
-            <p>รายละเอียดผลงานของคุณ</p>
-        </div>
 
-        <div class="project">
-            <h3>งานที่ 4</h3>
-            <p>รายละเอียดผลงานของคุณ</p>
-        </div>
-    </section>
-    
-    <footer>
-        <p>ติดต่อผมได้ที่: 
-            <a href="mailto:nitipoom@example.com">nitipoom@example.com</a>
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+        <p class="small-title">WELCOME TO MY PORTFOLIO</p>
+
+        <h1>
+            Hello, I'm
+            <span>Nitipoom</span>
+        </h1>
+
+        <p class="hero-description">
+            นักเรียนที่สนใจด้านภาษา การสื่อสาร
+            เทคโนโลยี และการเรียนรู้สิ่งใหม่ ๆ
         </p>
-        <p>&copy; <span id="year"></span> NITIPOOM. All rights reserved.</p>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="hero-buttons">
+            <a href="#works" class="btn main-btn">
+                ดูผลงาน
+            </a>
+
+            <a href="#contact" class="btn second-btn">
+                ติดต่อฉัน
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="image-glow"></div>
+
+        <!-- เปลี่ยนชื่อไฟล์เป็นรูปของตัวเอง -->
+        <img src="profile.jpg" alt="Profile">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <div class="section-title">
+        <span>01</span>
+        <h2>เกี่ยวกับฉัน</h2>
+    </div>
+
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <h3>
+                Hi! I'm
+                <span>Rattanaphorn</span>
+            </h3>
+
+            <p>
+                สวัสดีค่ะ ฉันเป็นนักเรียนที่สนใจด้านภาษา
+                การสื่อสาร และเทคโนโลยี
+                ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาตัวเองอยู่เสมอ
+            </p>
+
+            <p>
+                ในเวลาว่างฉันชอบทำกิจกรรมต่าง ๆ
+                ฝึกภาษา และสร้างผลงานที่สามารถนำมาใช้
+                ในการเรียนและพัฒนาทักษะของตัวเอง
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="info">
+                <span>NAME</span>
+                <strong>Rattanaphorn</strong>
+            </div>
+
+            <div class="info">
+                <span>EDUCATION</span>
+                <strong>High School Student</strong>
+            </div>
+
+            <div class="info">
+                <span>INTEREST</span>
+                <strong>Language • Business • Technology</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= HISTORY ================= -->
+
+<section id="history" class="section history-section">
+
+    <div class="section-title">
+        <span>02</span>
+        <h2>ประวัติ</h2>
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="year">2024</span>
+
+                <h3>มัธยมศึกษาตอนปลาย</h3>
+
+                <p>
+                    เริ่มเรียนรู้และพัฒนาทักษะด้านภาษา
+                    การสื่อสาร และการทำกิจกรรมต่าง ๆ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="year">2025</span>
+
+                <h3>พัฒนาทักษะด้านภาษา</h3>
+
+                <p>
+                    ฝึกฝนภาษาจีนและภาษาอังกฤษ
+                    รวมถึงการนำภาษาไปใช้ในการสื่อสาร
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="year">2026</span>
+
+                <h3>สร้าง Portfolio</h3>
+
+                <p>
+                    เริ่มสร้างผลงานและ Portfolio
+                    เพื่อรวบรวมประสบการณ์และทักษะ
+                    ที่ได้เรียนรู้
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= WORKS ================= -->
+
+<section id="works" class="section">
+
+    <div class="section-title">
+        <span>03</span>
+        <h2>ผลงาน</h2>
+    </div>
+
+
+    <div class="works-grid">
+
+
+        <div class="work-card">
+
+            <div class="work-image">
+                <img src="work1.jpg" alt="Work 1">
+            </div>
+
+            <div class="work-content">
+
+                <span>PROJECT 01</span>
+
+                <h3>Chinese Language Project</h3>
+
+                <p>
+                    ผลงานเกี่ยวกับภาษาจีน
+                    และการสื่อสาร
+                </p>
+
+                <a href="#">
+                    VIEW PROJECT →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="work-card">
+
+            <div class="work-image">
+                <img src="work2.jpg" alt="Work 2">
+            </div>
+
+            <div class="work-content">
+
+                <span>PROJECT 02</span>
+
+                <h3>School Activity</h3>
+
+                <p>
+                    ผลงานกิจกรรมและการทำงานร่วมกับผู้อื่น
+                </p>
+
+                <a href="#">
+                    VIEW PROJECT →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="work-card">
+
+            <div class="work-image">
+                <img src="work3.jpg" alt="Work 3">
+            </div>
+
+            <div class="work-content">
+
+                <span>PROJECT 03</span>
+
+                <h3>Creative Project</h3>
+
+                <p>
+                    ผลงานด้านการออกแบบและความคิดสร้างสรรค์
+                </p>
+
+                <a href="#">
+                    VIEW PROJECT →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="section skills-section">
+
+    <div class="section-title">
+        <span>04</span>
+        <h2>ทักษะ</h2>
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <div class="skill-number">01</div>
+            <h3>Chinese</h3>
+            <p>ภาษาจีน</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-number">02</div>
+            <h3>English</h3>
+            <p>ภาษาอังกฤษ</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-number">03</div>
+            <h3>Communication</h3>
+            <p>การสื่อสาร</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-number">04</div>
+            <h3>Creativity</h3>
+            <p>ความคิดสร้างสรรค์</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="section-title">
+        <span>05</span>
+        <h2>ติดต่อ</h2>
+    </div>
+
+
+    <div class="contact-container">
+
+        <div class="contact-text">
+
+            <h2>
+                Let's
+                <span>Connect.</span>
+            </h2>
+
+            <p>
+                หากต้องการติดต่อหรือพูดคุย
+                สามารถติดต่อฉันได้ทางช่องทางด้านล่าง
+            </p>
+
+        </div>
+
+
+        <div class="contact-links">
+
+            <a href="mailto:your@email.com">
+                <span>EMAIL</span>
+                your@email.com
+            </a>
+
+            <a href="#">
+                <span>LINE</span>
+                @yourline
+            </a>
+
+            <a href="#">
+                <span>GITHUB</span>
+                github.com/yourusername
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Nitipoom — My Portfolio
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
